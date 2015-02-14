@@ -1,0 +1,23 @@
+bsub << EndOfMessage
+#!/bin/bash
+#BSUB -q short  # which queue
+
+#BSUB -n 1 # to request a number of cores
+
+#BSUB -R rusage[mem=1000] # to specify the amount of memory required per slot, default is 1G
+
+#BSUB -W 4:00 # how much Wall Clock (time) this job needs in Hours:Seconds, default is 60 minutes
+
+#BSUB -J demo$1[1] #name and number of copies of this job to run. Here 50 times
+
+#Set where logs go %J is job id and %I is instance of it
+#BSUB -o "logs/%J.%I.out"
+#BSUB -e "logs/%J.%I.err"
+
+echo \`date\` start 
+
+#here the code is run with the dataset as an argument
+python fib.py $1
+
+echo \`date\` end 
+EndOfMessage

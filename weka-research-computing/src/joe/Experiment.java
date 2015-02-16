@@ -21,6 +21,7 @@ public class Experiment implements Runnable {
 
 	public static void main(String[] args) throws InterruptedException, FileNotFoundException, IOException {
 		
+		
 		int cores = Runtime.getRuntime().availableProcessors()-1;
 		
 		cores = 4;
@@ -99,13 +100,13 @@ public class Experiment implements Runnable {
 
 			String result = "###, " + label + ", " + smallNum(f1) + ", " + evalclassifier.getClass().getSimpleName() + "," + instances.relationName() + "," + timeTaken;
 
-			System.out.println("+" + result);
+			System.err.println("+" + result);
 
 			if (es != null)
 				System.out.println("+=+=Threads Left= " + es.getQueue().size());
 
 		} catch (Exception e) {
-			System.out.println("Experiment Failed");
+			System.err.println("Experiment Failed");
 			String result = "###, " + label + ", Error, " + evalclassifier.getClass().getSimpleName() + ", " + dataset + ", " + e.getClass().getSimpleName() + ", " + e.getMessage();
 			System.out.println("+" + result);
 			e.printStackTrace();

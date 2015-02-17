@@ -2,7 +2,7 @@ bsub << EndOfMessage
 #!/bin/bash
 #BSUB -q short  # which queue
 
-#BSUB -n 5 # to request a number of cores
+#BSUB -n 4 # to request a number of cores
 
 #BSUB -R rusage[mem=1000] # to specify the amount of memory required per slot, default is 1G
 

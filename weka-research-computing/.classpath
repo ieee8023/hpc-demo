@@ -10,5 +10,7 @@
 	<classpathentry kind="lib" path="lib/log4j-1.2.15.jar"/>
 	<classpathentry kind="lib" path="lib/commons-lang3-3.3.2.jar" sourcepath="lib-src/commons-lang3-3.3.2-src.zip"/>
 	<classpathentry kind="lib" path="lib/commons-math3-3.4.1.jar" sourcepath="lib-src/commons-math3-3.4.1-src.zip"/>
+	<classpathentry kind="lib" path="lib/mtj-1.0-snapshot.jar"/>
+	<classpathentry kind="lib" path="lib/NeuralNetwork.jar" sourcepath="lib-src/NeuralNetwork-1.1.zip"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>
